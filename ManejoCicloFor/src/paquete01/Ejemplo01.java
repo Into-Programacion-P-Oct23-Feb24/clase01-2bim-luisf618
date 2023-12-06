@@ -15,15 +15,18 @@ public class Ejemplo01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        String cadenaFinal = "";
         for (int i = 1; i <= 10; i++) {
-            System.out.printf("%d\n", i);
+            cadenaFinal = String.format("%s%d",
+                    cadenaFinal,i);
         }
-        
+        // Usamos el String.format para acumular cadenas y presentar varias
+        // cadenas al final de cualquier proceso
         for (int i = 1; i < 11; i++) {
-            System.out.printf("%d\n", i);
+            cadenaFinal = String.format("%s%d",
+                    cadenaFinal,i);
         }
-
+        System.out.printf("%s",cadenaFinal);
     }
 
 }
